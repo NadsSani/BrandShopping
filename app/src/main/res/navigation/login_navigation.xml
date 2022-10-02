@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/nav_login">
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.nads.shopping.ui.login.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_nav_login_to_nav_sugn_up"
+            app:destination="@id/nav_sugn_up" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_sugn_up"
+        android:name="com.nads.shopping.ui.login.signup.SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+    </fragment>
+
+</navigation>

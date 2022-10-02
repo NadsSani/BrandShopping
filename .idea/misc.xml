@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/bgforcaticons.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/bottom_navigation_bg.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_account_s.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_account_uns.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_back.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_cart_s.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_cart_uns.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_categories_s.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_categories_uns.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_favorites_s.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_favorites_uns.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_home_s.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_home_uns.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_nav_account.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_nav_cart.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_nav_cateories.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_nav_favorites.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/ic_nav_home.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/mmmagicbtnbg.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/nexticon.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/selected_option_image_bg.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/timerslotbackground.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/timerslotselectedbg.xml" value="0.13148148148148148" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/drawable/whitebgcircle.xml" value="0.2203125" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/alert_builder.xml" value="0.1" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/brand_filter_item.xml" value="0.1118659420289855" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/brand_item.xml" value="0.1118659420289855" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/cart_item.xml" value="0.1118659420289855" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/category_filter_item.xml" value="0.1118659420289855" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/category_item.xml" value="0.1" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/custom_info_contents.xml" value="0.25" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_cart.xml" value="0.1" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_categories.xml" value="0.33" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_category_product_list.xml" value="0.1" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_dress_bus.xml" value="0.25257731958762886" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_dummy.xml" value="0.1" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_full_product_list.xml" value="0.15" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_product_details.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_product_details_dia.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_product_list.xml" value="0.14945652173913043" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_select_cat_first.xml" value="0.5" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_sign_up.xml" value="0.33" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fragment_toys_bus.xml" value="0.292259083728278" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/fullproductpagingsourceitem.xml" value="0.1526268115942029" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/home_brand_item.xml" value="0.1" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/home_category_item.xml" value="0.22" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/product_item.xml" value="0.22" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/sub_category_item.xml" value="0.1408514492753623" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/sub_category_item_home.xml" value="0.1408514492753623" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/layout/timeslot.xml" value="0.25" />
+        <entry key="..\:/Users/nadee/AndroidStudioProjects/oldbrandatty/Brandatty/Brandatty/app/src/main/res/menu/activity_home_drawer.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <data>
+       <variable
+           name="catViewModel"
+           type="com.nads.shopping.viewmodels.CategoriesViewModel" />
+   </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bgforcategory"
+        tools:context=".ui.home.starting.StarterFragment">
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="263dp"
+            android:layout_height="263dp"
+            android:background="@drawable/circleforcategory"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.446" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/toysbusbutton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toysbutton"
+            app:layout_constraintVertical_bias="0.457" />
+
+        <ImageView
+            android:id="@+id/toysbutton"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/bgforcaticons"
+            android:paddingBottom="35dp"
+            android:paddingLeft="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp"
+            android:src="@drawable/toys_icon"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/toysbusbutton"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/bgforcaticons"
+            android:paddingTop="25dp"
+
+            android:paddingBottom="35dp"
+            android:src="@drawable/bus_icon2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dressbusbutton"
+            app:layout_constraintVertical_bias="0.179" />
+
+        <ImageView
+            android:id="@+id/dressbusbutton"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/bgforcaticons"
+            android:paddingTop="22dp"
+            android:paddingBottom="35dp"
+            android:src="@drawable/bus_icon"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.299" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.63064295" />
+
+        <ImageView
+            android:id="@+id/dressbutton"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/bgforcaticons"
+            android:paddingTop="25dp"
+            android:paddingBottom="35dp"
+            android:src="@drawable/dress_icon2"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toStartOf="@+id/imageView8"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.299" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Toys"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/toysbutton"
+            app:layout_constraintVertical_bias="0.857" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.270073" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.72262776" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dress"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintHorizontal_bias="0.705"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dressbutton"
+            app:layout_constraintVertical_bias="0.386" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toys Bus"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/toysbusbutton"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13"
+            app:layout_constraintVertical_bias="0.512" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dress Bus"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/dressbusbutton"
+            app:layout_constraintEnd_toEndOf="@+id/dressbusbutton"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="@+id/dressbusbutton"
+            app:layout_constraintTop_toTopOf="@+id/dressbusbutton"
+            app:layout_constraintVertical_bias="0.770" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/whitebgcircle"
+            app:layout_constraintBottom_toTopOf="@+id/textView37"
+            app:layout_constraintEnd_toEndOf="@+id/dressbusbutton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView13"
+            app:layout_constraintTop_toTopOf="@+id/dressbusbutton"
+            app:layout_constraintVertical_bias="0.613"
+            app:srcCompat="@drawable/dress_icon" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/whitebgcircle"
+            app:layout_constraintBottom_toTopOf="@+id/textView36"
+            app:layout_constraintEnd_toEndOf="@+id/toysbusbutton"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="@+id/toysbusbutton"
+            app:layout_constraintTop_toTopOf="@+id/toysbusbutton"
+            app:layout_constraintVertical_bias="0.7"
+            app:srcCompat="@drawable/toy_car" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

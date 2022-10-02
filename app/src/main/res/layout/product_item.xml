@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.nads.shopping.R" />
+
+        <variable
+            name="listener"
+            type="com.nads.shopping.listeners.ItemSelectListener" />
+
+        <variable
+            name="product"
+            type="com.nads.shopping.datamodels.Product" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->listener.onItemSelected(product)}">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white_200"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:layout_constraintDimensionRatio="7:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@{product.photo}" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="0dp"
+            android:background="@color/white"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView5"
+            app:layout_constraintStart_toStartOf="@+id/materialCardView5"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView5" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/museo_sans_300"
+            android:en="@{product.brandName}"
+            android:ar="@{product.brandNameAr}"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView5"
+            app:layout_constraintStart_toStartOf="@+id/materialCardView5"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView5"
+            tools:text="United Colors of Bennetton" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/museo_sans_300"
+            android:en="@{product.name}"
+            android:ar="@{product.nameAr}"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            tools:text="United Colors of Bennetton" />
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/museo_sans_700"
+            android:text="@{`QAR `+product.price}"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/teal_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:text="QAR 56" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:alpha=".5"
+            android:fontFamily="@font/museo_sans_300"
+            android:text="@{`QAR `+product.previousPrice}"
+            android:visibility="@{!product.previousPrice.equals(`0`) &amp;&amp; product.previousPrice!=null}"
+            android:textColor="@color/teal_700"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/textView6"
+            tools:text="QAR 96" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:alpha=".6"
+            android:background="@color/teal_700"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            android:visibility="@{!product.previousPrice.equals(`0`) &amp;&amp; product.previousPrice!=null}"
+            app:layout_constraintEnd_toEndOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="@+id/textView7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

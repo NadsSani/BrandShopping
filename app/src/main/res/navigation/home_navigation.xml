@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/selectCatFirst">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.nads.shopping.ui.home.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="message"
+            android:defaultValue="0"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_product_list"
+            app:destination="@id/nav_product_list" />
+        <argument
+            android:name="selectedcat"
+            app:argType="integer"
+            android:defaultValue="0" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.nads.shopping.ui.home.cart.CartFragment"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_nav_cart_to_nav_checkout_address"
+            app:destination="@id/nav_checkout_address" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_categories"
+        android:name="com.nads.shopping.ui.home.category.CategoryFragment"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_nav_categories_to_nav_product_list"
+            app:destination="@id/nav_product_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_product_list"
+        android:name="com.nads.shopping.ui.home.product.ProductListFragment"
+        tools:layout="@layout/fragment_product_list">
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="total"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.nads.shopping.ui.home.favorites.FavoritesFragment"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/nav_checkout_address"
+        android:name="com.nads.shopping.ui.home.checkout.CheckoutAddressFragment"
+        tools:layout="@layout/fragment_checkout_address">
+        <action
+            android:id="@+id/action_nav_checkout_address_to_nav_checkout_card"
+            app:destination="@id/nav_checkout_card" />
+        <action
+            android:id="@+id/action_nav_checkout_address_to_nav_address_list"
+            app:destination="@id/nav_address_list" />
+        <action
+            android:id="@+id/action_nav_checkout_address_to_nav_checkout_summary"
+            app:destination="@id/nav_checkout_summary" />
+        <argument app:argType="string" android:defaultValue="0" android:name="couponCode"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_checkout_card"
+        android:name="com.nads.shopping.ui.home.checkout.CheckoutCardFragment"
+        tools:layout="@layout/fragment_checkout_card">
+        <action
+            android:id="@+id/action_nav_checkout_card_to_nav_checkout_summary"
+            app:destination="@id/nav_checkout_summary" />
+        <argument android:name="street" />
+        <argument android:name="zone" />
+        <argument android:name="building" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_checkout_summary"
+        android:name="com.nads.shopping.ui.home.checkout.CheckoutSummaryFragment"
+        tools:layout="@layout/fragment_checkout_summary">
+        <action
+            android:id="@+id/action_nav_checkout_summary_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument android:name="street" />
+        <argument android:name="zone" />
+        <argument android:name="building" />
+        <argument
+            android:name="couponCode"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.nads.shopping.ui.home.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_nav_profile_to_nav_orders"
+            app:destination="@id/nav_orders" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_account"
+            app:destination="@id/nav_account" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_address_list"
+            app:destination="@id/nav_address_list" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_change_password"
+            app:destination="@id/nav_change_password" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.nads.shopping.ui.home.profile.AccountFragment"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/nav_orders"
+        android:name="com.nads.shopping.ui.home.order.OrderHistoryFragment"
+        tools:layout="@layout/fragment_order_history" />
+    <fragment
+        android:id="@+id/nav_address_list"
+        android:name="com.nads.shopping.ui.home.address.AddressListFragment"
+        tools:layout="@layout/fragment_address_list">
+        <action
+            android:id="@+id/action_nav_address_list_to_nav_add_address"
+            app:destination="@id/nav_add_address" />
+        <argument
+            android:name="is_edit_mode"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_add_address"
+        android:name="com.nads.shopping.ui.home.address.AddAddressFragment"
+        tools:layout="@layout/fragment_add_address">
+        <argument
+            android:name="is_edit_mode"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="street"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="zone"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="building"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="address_id"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_change_password"
+        android:name="com.nads.shopping.ui.home.password.ChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/nav_coupon"
+        android:name="com.nads.shopping.ui.home.coupon.CouponListFragment"
+        tools:layout="@layout/fragment_coupon_list" />
+    <fragment
+        android:id="@+id/selectCatFirst"
+        android:name="com.nads.shopping.ui.home.home.SelectCatFirst"
+        android:label="fragment_select_cat_first"
+        tools:layout="@layout/fragment_select_cat_first" >
+        <action
+            android:id="@+id/action_selectCatFirst_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_selectCatFirst_to_dressBus"
+            app:destination="@id/dressBus" />
+        <action
+            android:id="@+id/action_selectCatFirst_to_toysBus"
+            app:destination="@id/toysBus" />
+        <argument
+            android:name="selectedcat"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/dressBus"
+        android:name="com.nads.shopping.ui.home.bus.DressBus"
+        android:label="fragment_dress_bus"
+        tools:layout="@layout/fragment_dress_bus" />
+    <fragment
+        android:id="@+id/toysBus"
+        android:name="com.nads.shopping.ui.home.bus.ToysBus"
+        android:label="fragment_toys_bus"
+        tools:layout="@layout/fragment_toys_bus" />
+    <fragment
+        android:id="@+id/fullProductList2"
+        android:name="com.nads.shopping.ui.home.home.FullProductList"
+        android:label="FullProductList" />
+
+</navigation>

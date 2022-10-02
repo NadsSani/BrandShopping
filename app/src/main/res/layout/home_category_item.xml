@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.nads.shopping.R" />
+
+        <variable
+            name="listener"
+            type="com.nads.shopping.listeners.ItemSelectListener" />
+
+        <variable
+            name="category"
+            type="com.nads.shopping.datamodels.Category" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->listener.onItemSelected(category)}">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView5"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="36dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@{category.selected? @color/teal_700:@color/white_500}"
+            app:strokeWidth="1dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="@color/white_200"
+                app:cardCornerRadius="36dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@{category.photo}"
+                    tools:src="@drawable/avatar" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:ar="@{category.nameAr}"
+            android:en="@{category.name}"
+            android:fontFamily="@{category.selected?R.font.museo_sans_700:R.font.museo_sans_300}"
+            android:textAllCaps="true"
+            android:textColor="@{category.selected?@color/teal_700:@color/black}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView5"
+            app:layout_constraintStart_toStartOf="@+id/materialCardView5"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView5"
+            tools:text="KIDS" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

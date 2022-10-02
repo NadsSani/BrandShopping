@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.nads.shopping.R" />
+
+        <variable
+            name="listener"
+            type="com.nads.shopping.listeners.ItemSelectListener" />
+
+        <variable
+            name="optionKey"
+            type="com.nads.shopping.datamodels.OptionKey" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->listener.onItemSelected(optionKey)}">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView5"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@{optionKey.selected?@color/teal_700:@color/white}"
+            app:cardCornerRadius="36dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/teal_700"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@{optionKey.selected?R.font.museo_sans_700:R.font.museo_sans_300}"
+                android:en="@{optionKey.name}"
+                android:ar="@{optionKey.nameAr}"
+                android:textAllCaps="true"
+                android:textColor="@{optionKey.selected?@color/white:@color/teal_700}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/materialCardView5"
+                app:layout_constraintStart_toStartOf="@+id/materialCardView5"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView5"
+                tools:text="L"
+                tools:textColor="@color/teal_700" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@{optionKey.photo}"
+                android:visibility="@{optionKey.photo.length>0}"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/selected_option_image_bg"
+                android:visibility="@{optionKey.photo.length>0 &amp;&amp; optionKey.selected}"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

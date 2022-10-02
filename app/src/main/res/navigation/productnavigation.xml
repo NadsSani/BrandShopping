@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/productnavigation"
+    app:startDestination="@id/fullProductList">
+    <fragment
+        android:id="@+id/categoryProductList"
+        android:name="com.nads.shopping.ui.home.home.CategoryProductList"
+        android:label="fragment_category_product_list"
+        tools:layout="@layout/fragment_category_product_list" />
+    <fragment
+        android:id="@+id/fullProductList"
+        android:name="com.nads.shopping.ui.home.home.FullProductList"
+        android:label="FullProductList" >
+        <action
+            android:id="@+id/action_fullProductList_to_categoryProductList"
+            app:destination="@id/categoryProductList" />
+        <action
+            android:id="@+id/action_fullProductList_to_productListFragment"
+            app:destination="@id/productListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.nads.shopping.ui.home.product.ProductListFragment"
+        android:label="ProductListFragment" >
+        <argument
+            android:name="type"
+            android:defaultValue="All"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            android:defaultValue="All"
+            app:argType="string" />
+        <argument
+            android:name="total"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+</navigation>

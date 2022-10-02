@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+<variable
+    name="filter"
+    type="com.nads.shopping.datamodels.SelectedFilter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/teal_100"
+            app:strokeColor="@color/teal_100"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/museo_sans_300"
+                android:textColor="@color/teal_700"
+                android:padding="8dp"
+                android:drawablePadding="8dp"
+                app:drawableEndCompat="@drawable/ic_close_white"
+                android:text="@{filter.name}" />
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.nads.shopping.viewmodels.FilterViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnApply"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="32dp"
+            android:elevation="6dp"
+            android:src="@drawable/ic_next_white"
+            app:backgroundTint="@color/teal_700"
+            app:layout_constraintBottom_toTopOf="@+id/materialCardView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/materialCardView10"
+            app:tint="@color/white" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="48dp">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/museo_sans_300"
+                        android:paddingStart="24sp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="24sp"
+                        android:paddingBottom="16dp"
+                        android:text="@string/filter"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/museo_sans_300"
+                        android:paddingStart="24sp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="24sp"
+                        android:visibility="gone"
+                        android:paddingBottom="16dp"
+                        android:text="@string/clear_all"
+                        android:textColor="@color/teal_700"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animate="@{false}"
+                        android:background="@color/white"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="24dp"
+                        app:itemBinding="@{viewModel.selectedFilterBinding}"
+                        app:items="@{viewModel.selectedFilters}"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView27"
+                        app:spanCount="1"
+                        tools:layout_height="60dp"
+                        tools:listitem="@layout/selected_filter_item"
+                        tools:minHeight="50dp" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerView6">
+
+                        <LinearLayout
+                            android:id="@+id/constraintLayout"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/recyclerView6">
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="24dp"
+                                android:fontFamily="@font/museo_sans_300"
+                                android:text="@string/categories"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                app:drawableEndCompat="@drawable/ic_down_arrow_round_black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <View
+                                android:id="@+id/view8"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="16dp"
+                                android:background="@color/white_400"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView26"
+                                tools:layout_height="10dp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:animate="@{false}"
+                                android:background="@color/white"
+                                android:clipToPadding="false"
+                                android:orientation="vertical"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="24dp"
+                                app:itemBinding="@{viewModel.filterCategoryBinding}"
+                                app:items="@{viewModel.categories}"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/view8"
+                                app:spanCount="1"
+                                tools:layout_height="100dp"
+                                tools:listitem="@layout/category_filter_item"
+                                tools:minHeight="50dp" />
+
+                            <TextView
+                                android:id="@+id/textView29"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/museo_sans_300"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginEnd="24dp"
+                                android:text="@string/brands"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                app:drawableEndCompat="@drawable/ic_down_arrow_round_black"
+                                app:layout_constraintEnd_toEndOf="@+id/textView26"
+                                app:layout_constraintStart_toStartOf="@+id/textView26"
+                                app:layout_constraintTop_toBottomOf="@+id/recyclerView5" />
+
+                            <View
+                                android:id="@+id/view10"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="16dp"
+                                android:background="@color/white_400"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView29"
+                                tools:layout_height="10dp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:animate="@{false}"
+                                android:background="@color/white"
+                                android:clipToPadding="false"
+                                android:orientation="vertical"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="24dp"
+                                app:itemBinding="@{viewModel.filterBrandItemBinding}"
+                                app:items="@{viewModel.brandList}"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/view10"
+                                app:spanCount="1"
+                                tools:layout_height="100dp"
+                                tools:listitem="@layout/category_filter_item"
+                                tools:minHeight="50dp" />
+
+                            <TextView
+                                android:id="@+id/textView30"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/museo_sans_300"
+                                android:text="@string/price"
+                                android:layout_marginStart="24dp"
+                                android:textAllCaps="true"
+                                android:layout_marginEnd="24dp"
+                                android:textColor="@color/black"
+                                app:drawableEndCompat="@drawable/ic_down_arrow_round_black"
+                                app:layout_constraintEnd_toEndOf="@+id/textView29"
+                                app:layout_constraintStart_toStartOf="@+id/textView29"
+                                app:layout_constraintTop_toBottomOf="@+id/recyclerView7" />
+
+                            <View
+                                android:id="@+id/view9"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="16dp"
+                                android:background="@color/white_400"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView30"
+                                tools:layout_height="10dp" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginBottom="40dp"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="@+id/textView30"
+                                app:layout_constraintStart_toStartOf="@+id/textView30"
+                                app:layout_constraintTop_toBottomOf="@+id/view9">
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/teal_700"
+                                    android:checked="@={viewModel.isPriceLH}"
+                                    android:fontFamily="@font/museo_sans_300"
+                                    android:text="@string/low_to_high" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/teal_700"
+                                    android:checked="@={!viewModel.isPriceLH}"
+                                    android:fontFamily="@font/museo_sans_300"
+                                    android:text="@string/high_to_low" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
